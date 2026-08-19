@@ -1,4 +1,3 @@
-```markdown
 <div align="center">
 
   # ⚡ Sudarshan Devadiga — Developer Portfolio
@@ -131,4 +130,3 @@ python3 -m http.server 3000
 <div align="center">
   <sub>Built with ❤️ by <strong>Sudarshan Devadiga</strong> for the <strong>Student Portfolio Hackathon 2026</strong>.</sub>
 </div>
-```
