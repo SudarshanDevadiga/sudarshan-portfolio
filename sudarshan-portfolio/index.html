@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Portfolio Metadata -->
+  <title>Sudarshan Devadiga | Portfolio – Student Portfolio Hackathon 2026</title>
+  <meta name="description" content="Official Portfolio of Sudarshan Devadiga for the Student Portfolio Hackathon 2026 & Placement Readiness. Computer Science Student at ITM Skills University, Minor in AI at IIT Ropar.">
+  <meta name="keywords" content="Sudarshan Devadiga, Portfolio, ITM Skills University, IIT Ropar, Full Stack Developer, AI Engineer, Hackathon Champion">
+  <meta name="author" content="Sudarshan Devadiga">
+
+  <!-- OpenGraph / Social Sharing -->
+  <meta property="og:title" content="Sudarshan Devadiga | Student Portfolio Hackathon 2026">
+  <meta property="og:description" content="AI & Full-Stack Developer | B.Tech CSE @ ITM Skills University | Minor in AI @ IIT Ropar | 5x Hackathon Winner">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Background Particle & Confetti Canvas -->
+  <canvas id="particle-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Ambient Glowing Background Lights -->
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+  <div class="ambient-glow ambient-glow-3"></div>
+
+  <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">
+        <div class="nav-brand-badge">SD</div>
+        <div class="nav-brand-text">Sudarshan<span>.Dev</span></div>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#pitch-deck" class="nav-link"><i class="fa-solid fa-bolt" style="color: var(--accent-amber);"></i> Pitch Mode</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Sound FX Toggle -->
+        <button class="nav-icon-btn" id="sound-toggle" title="Toggle Sound FX">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+
+        <!-- CLI Terminal Button -->
+        <button class="nav-icon-btn" id="terminal-toggle-btn" title="Open Interactive CLI Terminal (Ctrl+~)">
+          <i class="fa-solid fa-terminal"></i>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="nav-icon-btn" id="theme-toggle" title="Toggle Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+
+        <!-- Presentation Deck CTA -->
+        <button class="nav-btn-deck">
+          <i class="fa-solid fa-presentation-screen"></i> Presentation Deck
+        </button>
+
+        <!-- Mobile Nav Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       FLOATING VIEW MODE DOCK (RECRUITER / DECK / TERMINAL SHORTCUTS)
+       ========================================================================== -->
+  <div class="view-mode-bar" id="view-mode-bar">
+    <button class="view-mode-pill active" data-mode="full">
+      <i class="fa-solid fa-desktop"></i> <span>Full Portfolio</span>
+    </button>
+    <button class="view-mode-pill" data-mode="deck">
+      <i class="fa-solid fa-chalkboard-user"></i> <span>Live Deck (Slides)</span>
+    </button>
+    <button class="view-mode-pill" data-mode="scan">
+      <i class="fa-solid fa-bolt-lightning"></i> <span>2-Min Recruiter Scan</span>
+    </button>
+    <button class="view-mode-pill" data-mode="terminal">
+      <i class="fa-solid fa-terminal"></i> <span>Dev CLI</span>
+    </button>
+  </div>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left Hero Content -->
+        <div class="hero-content">
+          <div class="hero-badge-container">
+            <div class="hackathon-badge" onclick="triggerConfetti()">
+              <i class="fa-solid fa-trophy"></i> 5x Hackathon Winner & Champion
+            </div>
+            <div class="status-badge">
+              <span class="pulse-dot"></span> Available for Internships 2026
+            </div>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="text-gradient">Sudarshan Devadiga</span>
+          </h1>
+
+          <div class="hero-role-wrapper">
+            <span id="typewriter-text">AI & Full-Stack Developer</span>
+            <span class="typewriter-cursor"></span>
+          </div>
+
+          <p class="hero-bio">
+            Computer Science undergraduate at <strong>ITM Skills University</strong> with a specialized <strong>Minor in Artificial Intelligence from IIT Ropar</strong>. Passionate about architecting AI-powered solutions, robust full-stack applications, and high-impact software systems.
+          </p>
+
+          <div class="hero-credentials-pill">
+            <span class="cred-pill"><i class="fa-solid fa-graduation-cap"></i> B.Tech CSE (2024–2028)</span>
+            <span class="cred-pill"><i class="fa-solid fa-brain"></i> AI Minor @ IIT Ropar</span>
+            <span class="cred-pill"><i class="fa-solid fa-location-dot"></i> Mumbai / Thane, India</span>
+          </div>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-rocket"></i> Explore Projects
+            </a>
+            <button class="btn btn-outline btn-launch-deck">
+              <i class="fa-solid fa-chalkboard-user"></i> Presentation Deck Mode
+            </button>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-regular fa-paper-plane"></i> Get in Touch
+            </a>
+          </div>
+
+          <div class="hero-social-links">
+            <a href="https://github.com/SudarshanDevadiga" target="_blank" rel="noopener" class="social-icon-btn" title="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/sudarshan-devadiga/" target="_blank" rel="noopener" class="social-icon-btn" title="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:sudarshandevadiga200@gmail.com" class="social-icon-btn" title="Email Sudarshan">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="tel:9920474678" class="social-icon-btn" title="Call Sudarshan">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual Card -->
+        <div class="hero-card-display">
+          <div class="glass-profile-card tilt-card">
+            <div class="card-header-bar">
+              <div class="user-avatar-badge">
+                <div class="avatar-circle">SD</div>
+                <div class="avatar-info">
+                  <h3>Sudarshan Devadiga</h3>
+                  <p>sudarshandevadiga200@gmail.com</p>
+                </div>
+              </div>
+              <span class="status-badge" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">
+                <span class="pulse-dot"></span> Active
+              </span>
+            </div>
+
+            <div class="quick-stats-grid">
+              <div class="stat-item">
+                <div class="stat-number">8+</div>
+                <div class="stat-label">Flagship Projects</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">5x</div>
+                <div class="stat-label">Hackathon Awards</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">10</div>
+                <div class="stat-label">Certifications</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">IIT</div>
+                <div class="stat-label">AI Minor @ Ropar</div>
+              </div>
+            </div>
+
+            <!-- Mini Terminal / Code Preview -->
+            <div class="mini-code-window">
+              <div class="code-line">
+                <span class="code-keyword">const</span> <span class="code-var">candidate</span> = {
+              </div>
+              <div class="code-line" style="padding-left: 1.25rem;">
+                name: <span class="code-str">"Sudarshan Devadiga"</span>,
+              </div>
+              <div class="code-line" style="padding-left: 1.25rem;">
+                skills: [<span class="code-str">"Python"</span>, <span class="code-str">"MERN"</span>, <span class="code-str">"GenAI"</span>, <span class="code-str">"ML"</span>],
+              </div>
+              <div class="code-line" style="padding-left: 1.25rem;">
+                readiness: <span class="code-str">"Placement & Hackathon Ready"</span>
+              </div>
+              <div class="code-line">};</div>
+            </div>
+
+            <!-- Floating Trophy Badge -->
+            <div class="floating-award-badge" title="Click for Celebration!">
+              <div class="award-badge-icon">
+                <i class="fa-solid fa-trophy"></i>
+              </div>
+              <div class="award-badge-text">
+                PanIIT PIWOT Winner
+                <span>IMAGINE Hackathon 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INDUSTRY PRESENTATION / HACKATHON PITCH DECK MODE
+       ========================================================================== -->
+  <section class="pitch-section" id="pitch-deck">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-chalkboard-user"></i> Mandatory Industry Evaluation</span>
+        <h2 class="section-title">Student Portfolio Hackathon 2026 Pitch Deck</h2>
+        <p class="section-subtitle">
+          Engineered to support the compulsory Industry Presentation, highlighting technical architecture, GitHub source repositories, and measurable impact.
+        </p>
+      </div>
+
+      <!-- Pitch Banner -->
+      <div class="pitch-banner">
+        <div class="pitch-banner-top">
+          <div class="pitch-banner-title">
+            <i class="fa-solid fa-award"></i> Defense & Industry Evaluation Summary
+          </div>
+          <button class="btn btn-primary btn-launch-deck" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">
+            <i class="fa-solid fa-expand"></i> Launch Fullscreen Slide Deck
+          </button>
+        </div>
+        <p class="pitch-banner-desc">
+          Evaluators and industry judges can review key architectural decisions, problem-solving methodologies, and full source code repositories across AI, Full-Stack MERN, and Healthcare/FinTech domains.
+        </p>
+
+        <div class="pitch-highlights-grid">
+          <div class="pitch-highlight-card tilt-card">
+            <div class="pitch-highlight-icon"><i class="fa-solid fa-brain"></i></div>
+            <h4>AI & Machine Learning</h4>
+            <p>Computer Vision soil analysis, GenAI conversational support, and fraud anomaly detection pipelines.</p>
+          </div>
+          <div class="pitch-highlight-card tilt-card">
+            <div class="pitch-highlight-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h4>Full-Stack Architecture</h4>
+            <p>End-to-end MERN implementations with WebSockets, JWT authentication, and high-concurrency database design.</p>
+          </div>
+          <div class="pitch-highlight-card tilt-card">
+            <div class="pitch-highlight-icon"><i class="fa-solid fa-cubes"></i></div>
+            <h4>Real-World Impact</h4>
+            <p>Addressing agricultural yields, student mental wellness, insurance fraud prevention, and youth financial literacy.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Pitch Deck Tabs -->
+      <div class="pitch-tabs-wrapper">
+        <div class="pitch-tab-buttons">
+          <button class="pitch-tab-btn active" data-tab="tab-rubric">
+            <i class="fa-solid fa-list-check"></i> Rubric & Technical Readiness
+          </button>
+          <button class="pitch-tab-btn" data-tab="tab-architecture">
+            <i class="fa-solid fa-network-wired"></i> Architecture & Engineering
+          </button>
+          <button class="pitch-tab-btn" data-tab="tab-placement">
+            <i class="fa-solid fa-briefcase"></i> Placement & Internship Value
+          </button>
+        </div>
+
+        <!-- Tab 1: Rubric Focus -->
+        <div class="pitch-tab-content active" id="tab-rubric">
+          <div class="defense-grid">
+            <div class="defense-card tilt-card">
+              <div class="defense-card-header">
+                <span class="defense-badge">Criterion 01</span>
+                <i class="fa-solid fa-code" style="color: var(--accent-cyan);"></i>
+              </div>
+              <h3>Code Quality & GitHub Verification</h3>
+              <ul class="defense-points">
+                <li>All 8 flagship projects are backed by organized GitHub repositories.</li>
+                <li>Modular code structures, semantic commit histories, and clear documentation.</li>
+                <li>Implementation of standard RESTful API conventions and database indexing.</li>
+              </ul>
+            </div>
+
+            <div class="defense-card tilt-card">
+              <div class="defense-card-header">
+                <span class="defense-badge">Criterion 02</span>
+                <i class="fa-solid fa-lightbulb" style="color: var(--accent-amber);"></i>
+              </div>
+              <h3>Innovation & Problem Solving</h3>
+              <ul class="defense-points">
+                <li>Developed computer vision for soil nutrient diagnosis in <strong>Annadata Kisan</strong>.</li>
+                <li>Built empathetic GenAI response pipelines for student wellness in <strong>SAFE</strong>.</li>
+                <li>Hybrid rule & ML fraud risk scoring in <strong>MedScan</strong> for healthcare insurers.</li>
+              </ul>
+            </div>
+
+            <div class="defense-card tilt-card">
+              <div class="defense-card-header">
+                <span class="defense-badge">Criterion 03</span>
+                <i class="fa-solid fa-trophy" style="color: var(--accent-purple);"></i>
+              </div>
+              <h3>Hackathon Track Record</h3>
+              <ul class="defense-points">
+                <li>Winner of IMAGINE Hackathon (PIWOT 2025) organized by PanIIT Alumni India.</li>
+                <li>Winner of ITM Buildathon 3.0 & recipient of Hackathon Champion Award.</li>
+                <li>Multiple Pitch Perfect and Innovation titles demonstrating presentation mastery.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Architecture -->
+        <div class="pitch-tab-content" id="tab-architecture">
+          <div class="defense-grid">
+            <div class="defense-card tilt-card">
+              <div class="defense-card-header">
+                <span class="defense-badge">AI / ML Pipeline</span>
+                <i class="fa-solid fa-microchip" style="color: var(--accent-cyan);"></i>
+              </div>
+              <h3>Machine Learning Systems</h3>
+              <ul class="defense-points">
+                <li>Data preprocessing & feature engineering pipelines using Python & Scikit-Learn.</li>
+                <li>Image augmentation and convolutional neural networks for soil categorization.</li>
+                <li>Integration of LLM APIs with custom guardrails and prompt engineering.</li>
+              </ul>
+            </div>
+
+            <div class="defense-card tilt-card">
+              <div class="defense-card-header">
+                <span class="defense-badge">Full-Stack Web</span>
+                <i class="fa-solid fa-server" style="color: var(--accent-purple);"></i>
+              </div>
+              <h3>Full-Stack MERN & WebSockets</h3>
+              <ul class="defense-points">
+                <li>React.js single-page applications with clean state management and responsive styling.</li>
+                <li>Node.js/Express REST APIs with token-based JWT authentication and CORS policies.</li>
+                <li>Real-time bidirectional communication using Socket.io room events.</li>
+              </ul>
+            </div>
+
+            <div class="defense-card tilt-card">
+              <div class="defense-card-header">
+                <span class="defense-badge">Databases</span>
+                <i class="fa-solid fa-database" style="color: var(--accent-emerald);"></i>
+              </div>
+              <h3>Database Design & Optimization</h3>
+              <ul class="defense-points">
+                <li>Document modeling and schema aggregation pipelines in MongoDB.</li>
+                <li>Real-time database sync and authentication state using Firebase.</li>
+                <li>Relational database normalization and SQL query optimization.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Placement Readiness -->
+        <div class="pitch-tab-content" id="tab-placement">
+          <div class="defense-grid">
+            <div class="defense-card tilt-card">
+              <div class="defense-card-header">
+                <span class="defense-badge">Technical Foundation</span>
+                <i class="fa-solid fa-graduation-cap" style="color: var(--accent-cyan);"></i>
+              </div>
+              <h3>Academic & Specialization Depth</h3>
+              <ul class="defense-points">
+                <li>Dual academic grounding: B.Tech CSE at ITM Skills University + Minor in AI at IIT Ropar.</li>
+                <li>Solid grasp of Data Structures, Algorithms, DBMS, Operating Systems, and Networking.</li>
+                <li>9 verified certifications spanning Python, Java, C++, AI, and Generative AI.</li>
+              </ul>
+            </div>
+
+            <div class="defense-card tilt-card">
+              <div class="defense-card-header">
+                <span class="defense-badge">Leadership</span>
+                <i class="fa-solid fa-users" style="color: var(--accent-amber);"></i>
+              </div>
+              <h3>Teamwork & Cross-functional Leadership</h3>
+              <ul class="defense-points">
+                <li>Captain of the Basketball Team (Thane Police School), honing agile team coordination.</li>
+                <li>Scouting & Guiding leadership training instilling discipline and resilience.</li>
+                <li>Proven hackathon project management under high-pressure, time-constrained settings.</li>
+              </ul>
+            </div>
+
+            <div class="defense-card tilt-card">
+              <div class="defense-card-header">
+                <span class="defense-badge">Communication</span>
+                <i class="fa-solid fa-comments" style="color: var(--accent-emerald);"></i>
+              </div>
+              <h3>Presentation & Multilingual Skills</h3>
+              <ul class="defense-points">
+                <li>Winner of Pitch Perfect competitions for articulate technical presentation.</li>
+                <li>Multilingual communicator in English, Hindi, Marathi, Tulu, Sanskrit, and German.</li>
+                <li>Immediate availability for Summer 2026 software engineering & AI internships.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURED PROJECTS SECTION
+       ========================================================================== -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-code-fork"></i> Engineering Portfolio</span>
+        <h2 class="section-title">Featured Projects Showcase</h2>
+        <p class="section-subtitle">
+          Explore complete full-stack and AI projects built to solve genuine challenges in agriculture, healthcare, mental wellness, and education.
+        </p>
+      </div>
+
+      <!-- Filter and Search Controls -->
+      <div class="filter-search-container">
+        <div class="search-bar-wrapper">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="project-search" class="project-search-input" placeholder="Search by project name or tech (e.g. Python, MERN, AI)...">
+        </div>
+
+        <div class="filter-buttons-wrapper">
+          <button class="filter-btn active" data-filter="all">All Projects (8)</button>
+          <button class="filter-btn" data-filter="ai">AI & Machine Learning</button>
+          <button class="filter-btn" data-filter="mern">Full-Stack MERN</button>
+          <button class="filter-btn" data-filter="healthcare">Healthcare & FinTech</button>
+          <button class="filter-btn" data-filter="edtech">EdTech & Mobile</button>
+        </div>
+      </div>
+
+      <!-- Dynamic Projects Grid -->
+      <div class="projects-grid" id="projects-grid">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SKILLS & COMPETENCIES SECTION
+       ========================================================================== -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-microchip"></i> Technical Capabilities</span>
+        <h2 class="section-title">Skills & Technical Competencies</h2>
+        <p class="section-subtitle">
+          A comprehensive toolkit spanning programming paradigms, modern frameworks, machine learning systems, and core computer science fundamentals.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        
+        <!-- Category 1: AI & ML -->
+        <div class="skill-category-card tilt-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon"><i class="fa-solid fa-brain"></i></div>
+            <div>
+              <h3>AI & Data Science</h3>
+              <span style="font-size: 0.8rem; color: var(--accent-purple);">IIT Ropar AI Specialization</span>
+            </div>
+          </div>
+          <div class="skills-chips-wrapper">
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> Artificial Intelligence</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> Generative AI</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> Machine Learning</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> Computer Vision</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> Natural Language Processing</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> Prompt Engineering</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> Automation</span>
+          </div>
+        </div>
+
+        <!-- Category 2: Programming & Core CS -->
+        <div class="skill-category-card tilt-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon"><i class="fa-solid fa-code"></i></div>
+            <div>
+              <h3>Programming & Core CS</h3>
+              <span style="font-size: 0.8rem; color: var(--accent-cyan);">Languages & Theoretical CS</span>
+            </div>
+          </div>
+          <div class="skills-chips-wrapper">
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> Python</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> Java</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> C++</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> SQL</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> Data Structures & Algorithms</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> DBMS</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> Computer Networking</span>
+          </div>
+        </div>
+
+        <!-- Category 3: Full Stack & Web -->
+        <div class="skill-category-card tilt-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon"><i class="fa-solid fa-globe"></i></div>
+            <div>
+              <h3>Full-Stack & Web Dev</h3>
+              <span style="font-size: 0.8rem; color: var(--accent-emerald);">MERN Stack & Mobile</span>
+            </div>
+          </div>
+          <div class="skills-chips-wrapper">
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> HTML5 / CSS3 / JavaScript</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> React.js</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> Node.js & Express</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> REST APIs</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> Socket.io</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> No-Code Platforms</span>
+          </div>
+        </div>
+
+        <!-- Category 4: Tools & Databases -->
+        <div class="skill-category-card tilt-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon"><i class="fa-solid fa-database"></i></div>
+            <div>
+              <h3>Databases & Cloud Tools</h3>
+              <span style="font-size: 0.8rem; color: var(--accent-amber);">Data Storage & DevOps</span>
+            </div>
+          </div>
+          <div class="skills-chips-wrapper">
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> MongoDB</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> Firebase</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> Database Optimization</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> Git & GitHub</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> MS Office Suite</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> Google Sheets</span>
+          </div>
+        </div>
+
+        <!-- Category 5: Soft Skills & Leadership -->
+        <div class="skill-category-card tilt-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon"><i class="fa-solid fa-people-group"></i></div>
+            <div>
+              <h3>Leadership, Communication & Soft Skills</h3>
+              <span style="font-size: 0.8rem; color: var(--accent-cyan);">Industry Presentation & Team Collaboration</span>
+            </div>
+          </div>
+          <div class="skills-chips-wrapper">
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> Problem Solving & Analytical Thinking</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> Technical Communication & Pitching</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> Cross-functional Teamwork</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> Hackathon Project Management</span>
+            <span class="skill-chip"><i class="fa-solid fa-check"></i> Leadership & Team Captaincy</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ACHIEVEMENTS & HACKATHON TROPHY ROOM
+       ========================================================================== -->
+  <section class="achievements-section" id="achievements">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-trophy"></i> Awards & Recognition</span>
+        <h2 class="section-title">Hackathon Champion & Trophy Room</h2>
+        <p class="section-subtitle">
+          Proven competitive hackathon performance, innovative solution pitching, and recognized awards from prestigious institutions. Click cards for celebration!
+        </p>
+      </div>
+
+      <div class="trophy-grid">
+        
+        <div class="trophy-card tilt-card">
+          <div>
+            <div class="trophy-icon-wrapper"><i class="fa-solid fa-trophy"></i></div>
+            <h3>Winner – IMAGINE Hackathon (PIWOT 2025)</h3>
+            <div class="trophy-org"><i class="fa-solid fa-building-columns"></i> PanIIT Alumni India</div>
+            <p class="trophy-desc">
+              Secured first place in the prestigious nationwide IMAGINE Hackathon conducted by PanIIT Alumni India, recognized for high technical innovation and real-world viability.
+            </p>
+          </div>
+        </div>
+
+        <div class="trophy-card tilt-card">
+          <div>
+            <div class="trophy-icon-wrapper"><i class="fa-solid fa-medal"></i></div>
+            <h3>Winner – ITM Buildathon 3.0</h3>
+            <div class="trophy-org"><i class="fa-solid fa-university"></i> ITM Skills University</div>
+            <p class="trophy-desc">
+              Won 1st place in ITM Buildathon 3.0 after developing and presenting a functional software prototype during an intensive rapid hackathon sprint.
+            </p>
+          </div>
+        </div>
+
+        <div class="trophy-card tilt-card">
+          <div>
+            <div class="trophy-icon-wrapper"><i class="fa-solid fa-crown"></i></div>
+            <h3>Hackathon Champion Award</h3>
+            <div class="trophy-org"><i class="fa-solid fa-award"></i> ITM Group of Institutes</div>
+            <p class="trophy-desc">
+              Honored with the institutional Hackathon Champion title for continuous exemplary performances across competitive hackathons and coding challenges.
+            </p>
+          </div>
+        </div>
+
+        <div class="trophy-card tilt-card">
+          <div>
+            <div class="trophy-icon-wrapper"><i class="fa-solid fa-microphone-lines"></i></div>
+            <h3>Winner – Pitch Perfect</h3>
+            <div class="trophy-org"><i class="fa-solid fa-lightbulb"></i> School of Future Tech, ITM</div>
+            <p class="trophy-desc">
+              Awarded top honors for technical idea pitching, product storytelling, and answering rigorous defense queries from jury members.
+            </p>
+          </div>
+        </div>
+
+        <div class="trophy-card tilt-card">
+          <div>
+            <div class="trophy-icon-wrapper"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <h3>Most Innovative Idea Award</h3>
+            <div class="trophy-org"><i class="fa-solid fa-compass-drafting"></i> Pitch Perfect, ITM Skills University</div>
+            <p class="trophy-desc">
+              Special jury commendation for conceptual novelty, technological architecture, and high societal impact feasibility.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EDUCATION & CERTIFICATIONS SECTION
+       ========================================================================== -->
+  <section class="edu-cert-section" id="education">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Academic Pathway</span>
+        <h2 class="section-title">Education & Certifications</h2>
+        <p class="section-subtitle">
+          Rigorous academic training combined with 9 industry-recognized certifications across AI, software engineering, and digital tools.
+        </p>
+      </div>
+
+      <div class="timeline-cert-grid">
+        
+        <!-- Left: Education Timeline -->
+        <div class="timeline-column">
+          <h3><i class="fa-solid fa-book-open"></i> Formal Education</h3>
+          <div class="timeline">
+            
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card tilt-card">
+                <div class="timeline-period">2024 – 2028 (Pursuing)</div>
+                <div class="timeline-degree">Bachelor of Technology (B.Tech) – CSE</div>
+                <div class="timeline-inst">ITM Skills University</div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card tilt-card">
+                <div class="timeline-period">2026</div>
+                <div class="timeline-degree">Minor in Artificial Intelligence</div>
+                <div class="timeline-inst">Indian Institute of Technology (IIT) Ropar</div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card tilt-card">
+                <div class="timeline-period">2024</div>
+                <div class="timeline-degree">Higher Secondary (Computer Science)</div>
+                <div class="timeline-inst">Dnyan Ganga Education Trusts Junior College of Science & Commerce</div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card tilt-card">
+                <div class="timeline-period">2022</div>
+                <div class="timeline-degree">Secondary Education</div>
+                <div class="timeline-inst">Thane Police School, India</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Certifications Grid -->
+        <div class="cert-column">
+          <h3><i class="fa-solid fa-certificate"></i> Verified Certifications (10)</h3>
+          <div class="cert-cards-grid">
+            
+            <div class="cert-card tilt-card">
+              <div class="cert-info">
+                <h4>Minor in Artificial Intelligence</h4>
+                <p class="cert-org">Indian Institute of Technology (IIT) Ropar</p>
+              </div>
+              <span class="cert-date">2026</span>
+            </div>
+
+            <div class="cert-card tilt-card">
+              <div class="cert-info">
+                <h4>Course on Computer Concepts (CCC)</h4>
+                <p class="cert-org">NIELIT (National Institute of Electronics & IT)</p>
+              </div>
+              <span class="cert-date">Apr 2024</span>
+            </div>
+
+            <div class="cert-card tilt-card">
+              <div class="cert-info">
+                <h4>Diploma in Artificial Intelligence</h4>
+                <p class="cert-org">National Board of Vocational Training Education (NBVTE)</p>
+              </div>
+              <span class="cert-date">Jan 2024</span>
+            </div>
+
+            <div class="cert-card tilt-card">
+              <div class="cert-info">
+                <h4>Generative AI 101</h4>
+                <p class="cert-org">Pieces for Developers</p>
+              </div>
+              <span class="cert-date">Dec 2024</span>
+            </div>
+
+            <div class="cert-card tilt-card">
+              <div class="cert-info">
+                <h4>Certificate in Python Programming</h4>
+                <p class="cert-org">NBVTE</p>
+              </div>
+              <span class="cert-date">Jan 2024</span>
+            </div>
+
+            <div class="cert-card tilt-card">
+              <div class="cert-info">
+                <h4>Certificate in Java Programming</h4>
+                <p class="cert-org">NBVTE</p>
+              </div>
+              <span class="cert-date">Jan 2024</span>
+            </div>
+
+            <div class="cert-card tilt-card">
+              <div class="cert-info">
+                <h4>Certificate in C++ Programming (C++P)</h4>
+                <p class="cert-org">NBVTE</p>
+              </div>
+              <span class="cert-date">Nov 2023</span>
+            </div>
+
+            <div class="cert-card tilt-card">
+              <div class="cert-info">
+                <h4>Certificate Course in Microsoft Office</h4>
+                <p class="cert-org">NBVTE</p>
+              </div>
+              <span class="cert-date">Nov 2023</span>
+            </div>
+
+            <div class="cert-card tilt-card">
+              <div class="cert-info">
+                <h4>Certificate in Basic Computer Course</h4>
+                <p class="cert-org">NIELIT</p>
+              </div>
+              <span class="cert-date">Apr 2023</span>
+            </div>
+
+            <div class="cert-card tilt-card">
+              <div class="cert-info">
+                <h4>Creator Course</h4>
+                <p class="cert-org">Instagram</p>
+              </div>
+              <span class="cert-date">May 2023</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EXTRACURRICULARS, LEADERSHIP & LANGUAGES
+       ========================================================================== -->
+  <section class="extras-section" id="extras">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-shapes"></i> Beyond The Code</span>
+        <h2 class="section-title">Leadership & Languages</h2>
+        <p class="section-subtitle">
+          Sportsmanship, discipline, and multilingual versatility empowering holistic personal and professional development.
+        </p>
+      </div>
+
+      <div class="extras-grid">
+        
+        <!-- Card 1: Extracurricular & Leadership -->
+        <div class="extra-card tilt-card">
+          <div class="extra-card-header">
+            <i class="fa-solid fa-people-roof"></i>
+            <h3>Leadership & Discipline</h3>
+          </div>
+          <ul class="extra-list">
+            <li><strong>Captain – Basketball Team</strong> (Thane Police School): Guided the squad in inter-school tournaments, honing strategic decision making and peer motivation.</li>
+            <li><strong>Scouting & Guiding</strong>: Advanced character training, disaster management awareness, outdoor discipline, and ethical leadership.</li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Sports & Creative Interests -->
+        <div class="extra-card tilt-card">
+          <div class="extra-card-header">
+            <i class="fa-solid fa-dumbbell"></i>
+            <h3>Sports & Creative Pursuits</h3>
+          </div>
+          <ul class="extra-list">
+            <li><strong>Athletics & Fitness</strong>: Football, Swimming, Badminton, Powerlifting, and Track Athletics.</li>
+            <li><strong>Creative Arts</strong>: Passionate about visual storytelling through Photography & Freehand Drawing.</li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Multilingual Proficiency -->
+        <div class="extra-card tilt-card">
+          <div class="extra-card-header">
+            <i class="fa-solid fa-language"></i>
+            <h3>Languages</h3>
+          </div>
+          <div class="lang-grid">
+            <div class="lang-item">
+              <div class="lang-name">English</div>
+              <div class="lang-level">Professional</div>
+            </div>
+            <div class="lang-item">
+              <div class="lang-name">Hindi</div>
+              <div class="lang-level">Fluent</div>
+            </div>
+            <div class="lang-item">
+              <div class="lang-name">Marathi</div>
+              <div class="lang-level">Fluent</div>
+            </div>
+            <div class="lang-item">
+              <div class="lang-name">Tulu</div>
+              <div class="lang-level">Native</div>
+            </div>
+            <div class="lang-item">
+              <div class="lang-name">Sanskrit</div>
+              <div class="lang-level">Basic</div>
+            </div>
+            <div class="lang-item">
+              <div class="lang-name">German</div>
+              <div class="lang-level">Elementary</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT & PLACEMENT CONNECT SECTION
+       ========================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-handshake"></i> Let's Connect</span>
+        <h2 class="section-title">Get in Touch / Placement Contact</h2>
+        <p class="section-subtitle">
+          Open for internship opportunities, hackathon collaborations, and software engineering roles. Reach out directly!
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Left: Direct Info Items -->
+        <div class="contact-info-panel">
+          <h3>Let's Build Something Meaningful Together</h3>
+          <p>
+            Whether you are an industry evaluator evaluating my Hackathon 2026 portfolio, a recruiter looking for an AI & full-stack intern, or a peer looking to build, I look forward to connecting.
+          </p>
+
+          <div class="contact-direct-items">
+            
+            <div class="contact-item-box tilt-card">
+              <div class="contact-left">
+                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="contact-text-meta">
+                  <h5>Official Email</h5>
+                  <p>sudarshandevadiga200@gmail.com</p>
+                </div>
+              </div>
+              <button class="copy-btn" data-copy="sudarshandevadiga200@gmail.com">
+                <i class="fa-regular fa-copy"></i> Copy
+              </button>
+            </div>
+
+            <div class="contact-item-box tilt-card">
+              <div class="contact-left">
+                <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="contact-text-meta">
+                  <h5>Contact Phone</h5>
+                  <p>+91 9920474678</p>
+                </div>
+              </div>
+              <button class="copy-btn" data-copy="9920474678">
+                <i class="fa-regular fa-copy"></i> Copy
+              </button>
+            </div>
+
+            <div class="contact-item-box tilt-card">
+              <div class="contact-left">
+                <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div class="contact-text-meta">
+                  <h5>LinkedIn Network</h5>
+                  <p>linkedin.com/in/sudarshan-devadiga</p>
+                </div>
+              </div>
+              <a href="https://www.linkedin.com/in/sudarshan-devadiga/" target="_blank" rel="noopener" class="copy-btn" style="text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit
+              </a>
+            </div>
+
+            <div class="contact-item-box tilt-card">
+              <div class="contact-left">
+                <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+                <div class="contact-text-meta">
+                  <h5>GitHub Repositories</h5>
+                  <p>github.com/SudarshanDevadiga</p>
+                </div>
+              </div>
+              <a href="https://github.com/SudarshanDevadiga" target="_blank" rel="noopener" class="copy-btn" style="text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Interactive Contact Form -->
+        <div class="contact-form-card tilt-card">
+          <h3 style="font-size: 1.4rem; margin-bottom: 1.5rem; color: var(--text-primary);">
+            <i class="fa-solid fa-paper-plane" style="color: var(--accent-cyan);"></i> Send a Direct Message
+          </h3>
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Your Name</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="e.g. Placement Evaluator / Tech Recruiter" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Your Official Email</label>
+              <input type="email" id="contact-email" class="form-control" placeholder="e.g. evaluator@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-subject">Subject</label>
+              <input type="text" id="contact-subject" class="form-control" placeholder="Hackathon Evaluation / Internship Inquiry">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Message</label>
+              <textarea id="contact-message" class="form-control" placeholder="Share your message, feedback, or interview request..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i class="fa-solid fa-paper-plane"></i> Send Message Directly
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        Designed & Developed by <span class="footer-highlight">Sudarshan Devadiga</span> for the <strong>Student Portfolio Hackathon 2026</strong>.
+      </p>
+      <p style="font-size: 0.825rem; color: var(--text-muted);">
+        ITM Skills University | Minor in AI @ IIT Ropar | 5x Hackathon Winner | Placement & Internship Ready
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       PROJECT DEEP DIVE MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-body" id="modal-body-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       DEVELOPER CLI TERMINAL MODAL
+       ========================================================================== -->
+  <div class="terminal-modal-overlay" id="terminal-modal">
+    <div class="terminal-window">
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <span class="t-dot red"></span>
+          <span class="t-dot yellow"></span>
+          <span class="t-dot green"></span>
+        </div>
+        <div class="terminal-title">sudarshan-devadiga@portfolio: ~ (bash)</div>
+        <button id="terminal-close" style="color:var(--text-muted); cursor:pointer;"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="terminal-body" id="terminal-output">
+        <div style="color:var(--accent-cyan); font-weight:bold;">Welcome to Sudarshan Devadiga's Interactive CLI v2.6</div>
+        <div style="color:var(--text-muted); margin-bottom:0.75rem;">Type <b style="color:#fff;">help</b> to see all commands, or <b style="color:#fff;">pitch</b> to launch the presentation deck.</div>
+      </div>
+      <div class="terminal-input-row" style="padding: 0.75rem 1.25rem; background: #0c1220; border-top: 1px solid rgba(255,255,255,0.08);">
+        <span class="t-prompt">guest@portfolio:~$</span>
+        <input type="text" class="terminal-input" id="terminal-input" placeholder="Type a command (e.g. projects, pitch, awards, sudo hire)..." autocomplete="off">
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FULLSCREEN PRESENTATION SLIDE DECK OVERLAY
+       ========================================================================== -->
+  <div class="deck-overlay" id="deck-overlay">
+    <div class="deck-header">
+      <div class="deck-meta">
+        <div class="nav-brand-badge" style="width:32px; height:32px; font-size:0.9rem;">SD</div>
+        <div>
+          <b style="color:#fff; font-size:1.05rem;">Student Portfolio Hackathon 2026</b>
+          <span style="font-size:0.8rem; color:var(--text-secondary); margin-left:0.5rem;">Industry Defense Deck</span>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:1rem;">
+        <div class="deck-timer"><i class="fa-solid fa-stopwatch"></i> <span id="deck-timer-display">00:00</span></div>
+        <button id="deck-copy-rubric" class="btn btn-outline" style="padding:0.4rem 0.9rem; font-size:0.8rem;">
+          <i class="fa-regular fa-copy"></i> Copy Rubric Summary
+        </button>
+        <button id="deck-close" class="nav-icon-btn" title="Exit Deck (Esc)"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </div>
+
+    <!-- Slide Canvas -->
+    <div class="deck-slide-container">
+      
+      <!-- Slide 1: Introduction -->
+      <div class="deck-slide active">
+        <div class="deck-slide-tag">Candidate Profile & Overview</div>
+        <h2 class="deck-slide-title">Engineering High-Impact AI & Full-Stack Systems</h2>
+        <div class="deck-slide-grid">
+          <div class="deck-slide-card">
+            <h4>Academic Foundation</h4>
+            <p><strong>B.Tech CSE</strong> at ITM Skills University (2024–2028)</p>
+            <p><strong>Minor in AI</strong> from IIT Ropar (2026)</p>
+          </div>
+          <div class="deck-slide-card">
+            <h4>Track Record</h4>
+            <p>🏆 Winner, PanIIT IMAGINE Hackathon 2025</p>
+            <p>🏆 Winner, ITM Buildathon 3.0 & Champion Award</p>
+          </div>
+          <div class="deck-slide-card">
+            <h4>Core Expertise</h4>
+            <p>Computer Vision, GenAI, MERN Full-Stack, Fraud Anomaly Detection, Socket.io Real-time Systems</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Flagship AI Architecture -->
+      <div class="deck-slide">
+        <div class="deck-slide-tag">AI & Machine Learning Systems</div>
+        <h2 class="deck-slide-title">Annadata Kisan & MedScan Fraud Detection</h2>
+        <div class="deck-slide-grid">
+          <div class="deck-slide-card">
+            <h4>Annadata Kisan (Soil AI)</h4>
+            <p>Convolutional neural network image analysis of field photos to detect N-P-K nutrient composition and deliver automated crop fertilizer advisories.</p>
+          </div>
+          <div class="deck-slide-card">
+            <h4>MedScan (Insurance ML)</h4>
+            <p>Hybrid deterministic rule + machine learning anomaly engine to score fraudulent medical insurance claims in real-time with explainable AI markers.</p>
+          </div>
+          <div class="deck-slide-card">
+            <h4>SAFE AI (Mental Health)</h4>
+            <p>Empathetic conversational GenAI agent fine-tuned on psychological wellness frameworks (PHQ-9/GAD-7) for 24/7 student mental health support.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Full-Stack MERN & Systems -->
+      <div class="deck-slide">
+        <div class="deck-slide-tag">Full-Stack Architecture</div>
+        <h2 class="deck-slide-title">High-Concurrency Web & Mobile Platforms</h2>
+        <div class="deck-slide-grid">
+          <div class="deck-slide-card">
+            <h4>Gigzo Freelance Platform</h4>
+            <p>MERN stack architecture with real-time bidirectional WebSocket messaging via Socket.io, JWT auth, and milestone escrow states.</p>
+          </div>
+          <div class="deck-slide-card">
+            <h4>FinancePlay App</h4>
+            <p>Mobile gamification app teaching Indian teenagers compounding, budgeting, and simulated stock trading.</p>
+          </div>
+          <div class="deck-slide-card">
+            <h4>Database & Backend Design</h4>
+            <p>Optimized MongoDB document schemas, Firebase real-time state synchronization, and RESTful API architecture.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4: Hackathon Championships -->
+      <div class="deck-slide">
+        <div class="deck-slide-tag">Proven Execution Under Pressure</div>
+        <h2 class="deck-slide-title">5x Hackathon Championship Track Record</h2>
+        <div class="deck-slide-grid">
+          <div class="deck-slide-card">
+            <h4>PanIIT PIWOT 2025 Winner</h4>
+            <p>First place in nationwide IMAGINE Hackathon organized by PanIIT Alumni India for high-impact innovation.</p>
+          </div>
+          <div class="deck-slide-card">
+            <h4>ITM Buildathon 3.0 Winner</h4>
+            <p>Won 1st place in ITM Buildathon 3.0 and honored with the institutional Hackathon Champion title.</p>
+          </div>
+          <div class="deck-slide-card">
+            <h4>Pitch Perfect & Innovation</h4>
+            <p>Recognized for articulate technical storytelling and clear defense during rigorous jury questioning.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5: Academic Certifications & Leadership -->
+      <div class="deck-slide">
+        <div class="deck-slide-tag">Continuous Upskilling & Leadership</div>
+        <h2 class="deck-slide-title">10 Verified Certifications & Team Leadership</h2>
+        <div class="deck-slide-grid">
+          <div class="deck-slide-card">
+            <h4>Government & Industry Credentials</h4>
+            <p>IIT Ropar AI Minor, NIELIT CCC & BCC, NBVTE Diplomas in AI, Python, Java, C++, and Pieces GenAI 101.</p>
+          </div>
+          <div class="deck-slide-card">
+            <h4>Leadership & Athletics</h4>
+            <p>Basketball Team Captain (Thane Police School), Scouting & Guiding leadership discipline.</p>
+          </div>
+          <div class="deck-slide-card">
+            <h4>Multilingual Communication</h4>
+            <p>Fluent across 6 languages (English, Hindi, Marathi, Tulu, Sanskrit, German).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 6: Conclusion & Placement Readiness -->
+      <div class="deck-slide">
+        <div class="deck-slide-tag">Placement & Internship Readiness</div>
+        <h2 class="deck-slide-title">Ready to Add Immediate Value in Summer 2026</h2>
+        <div class="deck-slide-grid">
+          <div class="deck-slide-card">
+            <h4>Immediate Availability</h4>
+            <p>Available for Summer 2026 software engineering, AI/ML, and full-stack development internships.</p>
+          </div>
+          <div class="deck-slide-card">
+            <h4>Verified Repositories</h4>
+            <p>All source code is publicly accessible and documented on GitHub: github.com/SudarshanDevadiga</p>
+          </div>
+          <div class="deck-slide-card">
+            <h4>Direct Contact</h4>
+            <p>Email: sudarshandevadiga200@gmail.com<br>Phone: +91 9920474678</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Deck Controls Footer -->
+    <div class="deck-footer">
+      <div id="deck-slide-counter" style="font-family:var(--font-mono); color:var(--text-secondary); font-size:0.9rem;">Slide 1 / 6</div>
+      <div class="deck-controls">
+        <button class="deck-btn" id="deck-prev"><i class="fa-solid fa-arrow-left"></i> Previous</button>
+        <button class="deck-btn" id="deck-next">Next <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       RECRUITER 2-MINUTE SCAN VIEW MODAL
+       ========================================================================== -->
+  <div class="executive-view-modal" id="recruiter-modal">
+    <div class="executive-window">
+      <button class="modal-close-btn" id="recruiter-close"><i class="fa-solid fa-xmark"></i></button>
+      <span class="modal-category-badge" style="background:rgba(245,158,11,0.2); color:#f59e0b;">
+        <i class="fa-solid fa-bolt-lightning"></i> 2-Minute Recruiter Summary
+      </span>
+      <h2>Sudarshan Devadiga – Candidate Scorecard</h2>
+      <p style="color:var(--text-secondary); font-size:0.95rem;">
+        B.Tech CSE @ ITM Skills University (2024–2028) | Minor in AI @ IIT Ropar | 5x Hackathon Champion
+      </p>
+
+      <table class="summary-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Candidate Credentials</th>
+            <th>Verification Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Flagship Projects</strong></td>
+            <td>8 Full-Stack & AI Systems (Annadata Kisan, SAFE, Gigzo, MedScan, FinancePlay)</td>
+            <td><a href="#projects" style="color:var(--accent-cyan);">View Projects ↓</a></td>
+          </tr>
+          <tr>
+            <td><strong>AI Specialization</strong></td>
+            <td>Minor in AI at IIT Ropar + Diploma in AI + GenAI 101 Certification</td>
+            <td><a href="#education" style="color:var(--accent-cyan);">View Education ↓</a></td>
+          </tr>
+          <tr>
+            <td><strong>Hackathon Record</strong></td>
+            <td>Winner PanIIT PIWOT 2025, ITM Buildathon 3.0 Winner, Hackathon Champion</td>
+            <td><a href="#achievements" style="color:var(--accent-cyan);">View Awards ↓</a></td>
+          </tr>
+          <tr>
+            <td><strong>Technical Stack</strong></td>
+            <td>Python, Java, C++, SQL, MERN (React/Node/Mongo), Computer Vision, Socket.io</td>
+            <td><a href="#skills" style="color:var(--accent-cyan);">View Skills ↓</a></td>
+          </tr>
+          <tr>
+            <td><strong>Official GitHub</strong></td>
+            <td>github.com/SudarshanDevadiga</td>
+            <td><a href="https://github.com/SudarshanDevadiga" target="_blank" style="color:var(--accent-cyan);">Open Repo ↗</a></td>
+          </tr>
+          <tr>
+            <td><strong>Direct Contact</strong></td>
+            <td>sudarshandevadiga200@gmail.com | +91 9920474678</td>
+            <td><a href="mailto:sudarshandevadiga200@gmail.com" style="color:var(--accent-cyan);">Send Email ↗</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem;">
+        <button class="btn btn-primary btn-launch-deck" style="flex:1;">
+          <i class="fa-solid fa-chalkboard-user"></i> Open Industry Presentation Deck
+        </button>
+        <button class="btn btn-outline copy-btn" data-copy="sudarshandevadiga200@gmail.com">
+          <i class="fa-regular fa-copy"></i> Copy Email
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Bundle -->
+  <script src="script.js"></script>
+</body>
+</html>
