@@ -3,7 +3,7 @@
   # ⚡ Sudarshan Devadiga — Developer Portfolio
   ### 🏆 Student Portfolio Hackathon 2026 Winner Edition & Industry Presentation Showcase
 
-  [![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-06b6d4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://sudarshandevadiga.github.io/portfolio/)
+  [![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-06b6d4?style=for-the-badge&logo=google-chrome&logoColor=white)]([https://sudarshandevadiga.github.io/portfolio/](https://sudarshan-portfolio-black.vercel.app/#home))
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sudarshan-devadiga/)
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SudarshanDevadiga)
   [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sudarshandevadiga200@gmail.com)
